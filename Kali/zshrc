@@ -1,0 +1,31 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="half-life"
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-syntax-highlighting command-not-found)
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# Aliases [hacking tools]
+alias nmap="sudo grc nmap"
+alias cat="batcat --style=plain"
+alias ping="grc ping"
+alias ifconfig="grc ifconfig"
+
+# Aliases [standard utilities]
+alias ls="eza -lhg --color=always --icons"
+alias vim="nvim"
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
+# Running at terminal startup
+pfetch
