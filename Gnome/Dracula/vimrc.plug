@@ -1,0 +1,6 @@
+call plug#begin('~/.vim/plugged')
+Plug 'dracula/vim',{'as':'dracula'} " Dracula Theme
+call plug#end()
+
+" Theme
+colorscheme dracula
